@@ -1,0 +1,74 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>William Gail Photography & Design</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="mainpage">
+    
+    <header class="screen">
+        <div class="logo-container">
+            <a href="index.html">
+                <img class="logo" src="photos/logo.jpg" alt="William Gail Photography and Design Logo">
+            </a>
+        </div>
+    </header>
+    <nav>
+        <ul class="nav-link">
+            <li><a href="about.html">about</a></li>
+            <li><a href="gallery.html">gallery</a></li>
+            <li><a href="book.html">book</a></li>
+            <li><a href="contact.html">contact</a></li>
+        </ul>
+    </nav>
+    <main id="mainpage-main">
+        <section id="mainpage-gallery">
+            <img class="slide" src="photos/ANDREhighschoolfootball.jpg" alt="high school american football photoshoot" class="slide">
+            <img class="slide hide" src="photos/quinceaneraPhotoshoot.jpg" alt="quinceanera photoshoot">
+            <img class="slide hide" src="photos/Veil.jpg" alt="veiled woman">
+            <img class="slide hide" src="photos/couplewithhorses.jpg" alt="couple with horses photoshoot">
+            <img class="slide hide" src="photos/21stbirthday.jpg" alt="21st birthday photoshoot">
+        </section>
+    </main>
+    <footer>
+        <p class="copyright">
+            &copy; William Gail
+        </p>
+    </footer>
+    <script>
+        function changeSlideDelay(s, d, sn) {
+            s.forEach((slide, i) => {
+                    setTimeout(() =>{
+                        slide.classList.toggle('hide');
+                        if ((i+1) == sn) {
+                            console.log(slide.alt);
+                            s[0].classList.toggle('hide');
+                        }
+                        else {
+                            s[i+1].classList.toggle('hide');
+                        }
+                }, (i+1) * d);
+                })
+        }
+        function changeSlide(slideshow, delayNum) {
+            
+            let slideNum = slideshow.length;
+
+            changeSlideDelay(slideshow, delayNum, slideNum);
+
+            setInterval(()=>{
+                changeSlideDelay(slideshow, delayNum, slideNum);
+            }, slideNum * delayNum);
+                
+            }
+        
+        window.addEventListener('DOMContentLoaded', ()=> {
+            // variable declaration
+            let slideshow = Array.from(document.querySelectorAll('.slide'));
+
+            changeSlide(slideshow, 3000);
+        })
+    </script>
+</body>
+</html>
