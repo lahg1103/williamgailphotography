@@ -9,7 +9,7 @@
     <header>
         <div class="logo-container difference">
             <a href="index.html">
-                <img class="logo" src="photos/logo.jpg" alt="William Gail Photography and Design Logo">
+                <img class="logo" src="photos/logo.png" alt="William Gail Photography and Design Logo">
             </a>
         </div>
         <nav>
@@ -21,10 +21,63 @@
             </ul>
         </nav>
     </header>
-    <main id="contact-main">
-        <h1>Ready to leave your mark?</h1>
-        <p>Discover more <strong><a href="https://www.instagram.com/williamgailphotography">@williamgailphotography</a></strong></p>
+    <main id="contact-main" style="overflow-y:scroll">
+        <div class="gallery-container">
+            <h2>Weddings</h2>
+            <img class="cover" src="photos/Quinceaneraphotoshoot1.jpg" alt="quince" loading="lazy">
+            <img class="hidden slide" src="photos/quinceaneraPhotoshoot.jpg" alt="quince" loading="lazy">
+            <img class="hidden slide" src="photos/quinceaneraphotoshoot2.jpg" alt="quince" loading="lazy">
+            <img class="hidden slide" src="photos/quinceaneraphotoshoot3.jpg" alt="quince" loading="lazy">
+            
+            <img class="hidden slide" src="" alt="">
+            <button>learn more</button>
+        </div>
+        <div class="gallery-container">
+            <h2>Portrait</h2>
+            <img class="cover" src="photos/couplewithhorses.jpg" alt="quince" loading="lazy">
+            <img class="hidden slide" src="photos/couple_shot_blackandwhite.JPG" alt="quince" loading="lazy">
+            <img class="hidden slide" src="photos/highschoolfootball.jpg" alt="quince" loading="lazy">
+            
+            <img class="hidden slide" src="" alt="">
+            <button>learn more</button>
+        </div>
+        <div class="gallery-container">
+            <h2>Portrait & Events</h2>
+            <img class="cover" src="photos/Quinceaneraphotoshoot1.jpg" alt="quince" loading="lazy">
+            <img class="hidden slide" src="photos/quinceaneraPhotoshoot.jpg" alt="quince" loading="lazy">
+            <img class="hidden slide" src="photos/quinceaneraphotoshoot2.jpg" alt="quince" loading="lazy">
+            <img class="hidden slide" src="photos/quinceaneraphotoshoot3.jpg" alt="quince" loading="lazy">
+            
+            <img class="hidden slide" src="" alt="">
+            <button>learn more</button>
+        </div>
+        <div class="gallery-container">
+            <h2>Portrait & Design</h2>
+            <img src="photos/aaron_flowerbackdrop.JPG" alt="aaron" class="cover" loading="lazy">
+            <img src="photos/aaron_backdrop.JPG" alt="aaron" class="hidden slide" loading="lazy">
+            <button>learn more</button>
+        </div>
     </main>
     <footer><p class="copyright">&copy; William Gail</p></footer>
+    <script>
+        function accordion() {
+                console.log("call");
+                const galleryContainer = event.target.closest(".gallery-container");
+                galleryContainer.classList.toggle("active");
+                // declare
+                const galleryImages = galleryContainer.querySelectorAll(".slide").forEach(img => {
+                    img.classList.toggle("hidden");
+                });
+                
+                const cover = galleryContainer.querySelector(".cover");
+                cover.classList.toggle("active");
+            }
+        window.addEventListener("DOMContentLoaded", ()=> {
+            document.querySelectorAll(".gallery-container button").forEach(button => {
+            button.addEventListener("click", accordion);
+            });
+            
+        })
+    </script>
 </body>
 </html>
