@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
 :root {
     --coal: #333;
     --mediumgray: #ccc;
@@ -9,7 +10,7 @@
     box-sizing: border-box;
 }
 body {
-    font-family: sans-serif;
+    font-family: 'Hanken Grotesk', sans-serif;
     font-size: 1.12rem;
     background-color: var(--coal);
     overflow: clip;
@@ -71,6 +72,7 @@ p {
 }
 .logo-container {
     max-width: 15rem;
+    filter: grayscale(0.75);
 }
 .screen {
     mix-blend-mode: screen;
