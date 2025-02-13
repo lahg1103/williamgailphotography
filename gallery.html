@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="sidepage">
-    <header>
+    <header name="top">
         <div class="logo-container difference">
             <a href="index.html">
                 <img class="logo" src="photos/logo.png" alt="William Gail Photography and Design Logo">
@@ -22,39 +22,73 @@
         </nav>
     </header>
     
-    <main id="contact-main" style="overflow-y:scroll">
+    <main id="gallery-main">
         <div class="entry">
-            <img src="photos/21photoshoot.jpg" alt="young woman celebrating 21 birthday holding balloons that say 21 wearing black dress and silver heels">
-            <img src="photos/21stbirthday.jpg" alt="headshot of woman celebrating 21st birthday smiling at the camera">
-            <img src="photos/quinceaneraphotoshoot4.jpg" alt="quinceanera photoshoot girl">
-            <img src="photos/quinceaneraphotoshoot3.jpg" alt="quinceanera photoshoot girl">
-            <img src="photos/quinceanera2.jpg" alt="quinceanera ">
-            <img src="photos/quinceaneraphotoshoot.jpg" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
+            <img src="photos/juju.jpg" alt="young girl looking right sitting on new york city stairs" loading="lazy">
+        </div>
+        <div class="gallery-spread">
+            <div class="entry">
+                <img src="photos/21stbirthday.jpg" alt="headshot of woman celebrating 21st birthday smiling at the camera" loading="lazy">
+            </div>
+            <div class="entry">
+                <img src="photos/21photoshoot.jpg" alt="young woman celebrating 21 birthday holding balloons that say 21 wearing black dress and silver heels" loading="lazy">
+            </div>
+        </div>
+        
+        <div class="entry">
+            <img src="photos/quinceaneraphotoshoot.jpg" alt="quinceanera photoshoot" loading="lazy">
+        </div>
+        <div class="entry">
+            <img src="photos/quinceaneraphotoshoot2.jpg" alt="quinceanera photoshoot" loading="lazy">
+        </div>
+        
+        <div class="gallery-spread">
+            <div class="entry">
+                <img src="photos/quinceaneraphotoshoot5.jpg" alt="quinceanera photoshoot" loading="lazy">
+            </div>
+            <div class="entry">
+                <img src="photos/quinceaneraphotoshoot3.jpg" alt="quinceanera photoshoot girl" loading="lazy">
+            </div>
+        </div>
+        
+        
+        <div class="entry">
+            <img src="photos/quinceaneraphotoshoot4.jpg" alt="quinceanera photoshoot girl" loading="lazy">
+        </div>
+        
+        <div class="entry">
+            <img src="photos/highschoolfootball.jpg" alt="high school football player holding an american football in left hand headshot" loading="lazy">
+        </div>
+        <div class="entry">
+            <img src="photos/ANDREhighschoolfootball.jpg" alt="high school football player running across the field" loading="lazy">
+        </div>
+        <div class="entry">
+            <img src="photos/aaron_backdrop.JPG" alt="" loading="lazy">
+        </div>
+        <div class="entry">
+            <img src="photos/aaron_flowerbackdrop.JPG" alt="" loading="lazy">
+        </div>
+        <div class="entry">
+            <img src="" alt="" loading="lazy">
         </div>
     </main>
-    <footer><p class="copyright">&copy; William Gail</p></footer>
-    <script>
-        function accordion() {
-                console.log("call");
-                const galleryContainer = event.target.closest(".gallery-container");
-                galleryContainer.classList.toggle("active");
-                // declare
-                const galleryImages = galleryContainer.querySelectorAll(".slide").forEach(img => {
-                    img.classList.toggle("hidden");
-                });
+    <footer>
+        <div class="flex footer-spread">
+            <p>William Gail Photography & Design is a south Texas based photographer specializing in weddings, quinceañeras, and portrait based in the Rio Grande Valley. Now booking.
+            </p>
+            <div class="logo-container">
+                <a href="index.html">
+                    <img class="difference" src="photos/logo.png" alt="william gail photography and design logo" class="logo">
+                </a>
                 
-                const cover = galleryContainer.querySelector(".cover");
-                cover.classList.toggle("active");
-            }
-        window.addEventListener("DOMContentLoaded", ()=> {
-            document.querySelectorAll(".gallery-container button").forEach(button => {
-            button.addEventListener("click", accordion);
-            });
-            
-        })
-    </script>
+            </div>
+            <ul class="directory nav-link">
+                <li><a href="index.html">Home</a></li>
+            </ul>
+        </div>
+        <div class="flex space-between">
+            <p class="copyright">&copy; William Gail</p>
+            <p><a href="#top">back to the top &uparrow;</a></p>
+        </div>
+    </footer>
 </body>
-</html>
