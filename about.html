@@ -27,6 +27,7 @@
             <p>Photographer based in the RGV and Houston area.</p>
         </section>
     </main>
+    <div class="whitespace"></div>
     <footer name="footer">
         <div class="flex footer-spread darker-background">
             <p class="smaller-font">William Gail Photography & Design is a south Texas based photographer specializing in weddings, quinceañeras, and portrait based in the Rio Grande Valley. Now booking.
@@ -49,5 +50,14 @@
             <p class="back-to-top"><a href="#top">back to the top &uparrow;</a></p>
         </div>
     </footer>
+    <script>
+        window.addEventListener("DOMContentLoaded", () => {
+            const footer = document.querySelector("footer");
+            const main = document.querySelector("main");
+            const whiteSpace = document.querySelector(".whitespace");
+            let footerHeight = footer.getBoundingClientRect().height;
+            whiteSpace.style.height = footerHeight + 'px';
+        });
+    </script>
 </body>
 </html>

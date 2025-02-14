@@ -255,7 +255,7 @@ body.sidepage {
     display: flex;
     flex-direction: column;
     width: 100%;
-    border-bottom: 1px solid rgba(0,0,0,0.5);
+    border-bottom: 1px solid var(--accent1);
     padding-block: 1rem 0.25rem;
     flex-wrap: wrap;
     justify-content: center;
@@ -333,6 +333,6 @@ body.sidepage {
         align-items: center;
         justify-content: space-between;
 
-        padding-block: 1em;
+        padding-block: 2.3em;
     }
 }
