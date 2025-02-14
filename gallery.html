@@ -10,7 +10,7 @@
     <meta property="og:image" content="https://github.com/lahg1103/williamgailphotography/blob/main/photos/quinceaneraphotoshoot2.jpg?raw=true">
     <meta property="og:image:width" content="2000">
     <meta property="og:image:height" content="1333">
-    
+
     <title>Gallery | William Gail Photography & Design</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -80,7 +80,7 @@
             <img src="photos/weddingvows1.jpg" alt="" loading="lazy">
         </div>
     </main>
-    <div name="white-space">
+    <div class="whitespace">
 
     </div>
     <footer name="footer">
@@ -105,4 +105,19 @@
             <p class="back-to-top"><a href="#top">back to the top &uparrow;</a></p>
         </div>
     </footer>
+
+    <script>
+        window.addEventListener("DOMContentLoaded", () => {
+            const footer = document.querySelector("footer");
+            const whiteSpace = document.querySelector(".whitespace");
+            let footerHeight = footer.getBoundingClientRect().height;
+            whiteSpace.style.height = footerHeight + 'px';
+            window.addEventListener("scroll", () => {
+                console.log("yippie");
+                if (footer.getBoundingClientRect().bottom == 0) {
+                    console.log("noppie");
+                }
+            })
+        });
+    </script>
 </body>

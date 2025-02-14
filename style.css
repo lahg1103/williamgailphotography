@@ -31,12 +31,16 @@
     margin: 0;
     box-sizing: border-box;
 }
+html {
+    scroll-behavior: smooth;
+}
 body {
     font-family: 'Hanken Grotesk', sans-serif;
     font-size: 1rem;
     background-color: var(--coal);
     overflow: clip;
     color: var(--quartz);
+    position: relative;
 }
 header, nav {
     padding: 1rem;
@@ -134,7 +138,6 @@ p {
     padding-block: 1.75rem 1rem;
 }
 .entry {
-    overflow: clip;
     transition: 350ms ease-in-out;
 }
 
@@ -273,10 +276,14 @@ body.sidepage {
     min-height: 100%;
     width: 100%;
     padding: 1rem;
+    background-color: var(--quartz);
+    z-index: 5;
 }
 
 .sidepage footer {
-    z-index: 5;
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
     border-top: 1px solid var(--mediumgray);
 }
 .sidepage footer .nav-link {
@@ -284,6 +291,7 @@ body.sidepage {
 }
 
 .darker-background {
+    background-image: linear-gradient(rgba(0,0,0,0.3), var(--darkergray));
     background-color: var(--darkergray);
     color: var(--quartz);
 }
