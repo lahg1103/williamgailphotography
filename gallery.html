@@ -74,10 +74,19 @@
         <img src="photos/aaron_backdrop.JPG" alt="" loading="lazy">
 
         <div class="entry">
+            <img src="photos/weddingceremony.jpg" alt="" loading="lazy">
+        </div>
+        <div class="entry">
             <img src="photos/weddingvows.jpg" alt="" loading="lazy">
         </div>
         <div class="entry">
             <img src="photos/weddingvows1.jpg" alt="" loading="lazy">
+        </div>
+        <div class="entry">
+            <img src="photos/weddingKiss.jpg" alt="" loading="lazy">
+        </div>
+        <div class="entry">
+            <img src="photos/weddingafterkiss.jpg" alt="" loading="lazy">
         </div>
     </main>
     <div class="whitespace">
@@ -109,15 +118,10 @@
     <script>
         window.addEventListener("DOMContentLoaded", () => {
             const footer = document.querySelector("footer");
+            const main = document.querySelector("main");
             const whiteSpace = document.querySelector(".whitespace");
             let footerHeight = footer.getBoundingClientRect().height;
             whiteSpace.style.height = footerHeight + 'px';
-            window.addEventListener("scroll", () => {
-                console.log("yippie");
-                if (footer.getBoundingClientRect().bottom == 0) {
-                    console.log("noppie");
-                }
-            })
         });
     </script>
 </body>
