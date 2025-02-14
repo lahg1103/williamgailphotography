@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
 @keyframes slideUp {
     0% {
         transform: translateY(100%);
@@ -18,9 +20,11 @@
     }
 }
 :root {
-    --coal: #333;
-    --mediumgray: #ccc;
-    --quartz: #fcfcfc;
+    --coal: #000509;
+    --mediumgray: #58694C;
+    --quartz: #E7E2DF;
+    --darkergray: #13292C;
+    --accent1: #B16B48;
 }
 *, *::before, *::after {
     padding: 0;
@@ -37,7 +41,7 @@ body {
 header, nav {
     padding: 1rem;
 }
-footer {
+footer > * {
     padding-inline: 1rem;
 }
 a, a:active, a:visited {
@@ -92,6 +96,7 @@ p {
     max-width: 9.5rem;
     filter: grayscale(0.75);
 }
+
 .screen {
     mix-blend-mode: screen;
 }
@@ -125,6 +130,8 @@ p {
     grid-auto-flow: column;
     align-items: center;
     justify-items: center;
+    background-color: --accent1;
+    padding-block: 1.75rem 1rem;
 }
 .entry {
     overflow: clip;
@@ -225,7 +232,7 @@ p {
     bottom: 0;
 }
 .difference {
-    filter: brightness(0.25);
+    filter: brightness(0.85);
 }
 
 body.sidepage {
@@ -268,8 +275,45 @@ body.sidepage {
 
 .sidepage footer {
     z-index: 5;
+    border-top: 1px solid var(--mediumgray);
 }
-@media (min-width: 500px) {
+.sidepage footer .nav-link {
+    display: block;
+}
+
+.darker-background {
+    background-color: var(--darkergray);
+    color: var(--quartz);
+}
+.darker-background .nav-link a::after {
+    background-color: var(--quartz);
+}
+.darker-background .logo-container {
+    mix-blend-mode: screen;
+    filter: brightness(2);
+}
+.darker-background .logo-container:hover {
+    filter: brightness(2.75);
+}
+.darkest-background {
+    background-color: var(--coal);
+    color: var(--mediumgray);
+}
+.darkest-background .nav-link a:hover {
+    color: var(--quartz);
+}
+.darkest-background .nav-link a::after {
+    background-color: var(--quartz);
+}
+
+.smaller-font {
+    font-size: 0.75rem;
+}
+.back-to-top:hover {
+    color: var(--quartz);
+}
+
+@media (min-width: 510px) {
     .sidepage .logo-container 
     {
         max-width: 9.5rem;
@@ -278,5 +322,7 @@ body.sidepage {
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
+
+        padding-block: 1em;
     }
 }
