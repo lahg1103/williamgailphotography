@@ -21,8 +21,15 @@
             </ul>
         </nav>
     </header>
-    <main id="contact-main">
-        
+    <main id="book-main">
+        <div class="mobile-banner">
+            <div class="banner-text">
+                <h1 class="uppercase">Book</h1>
+                <h4><a href="index.html">Home </a><span class="alternate-font">&bullet;</span> Book</h4>
+            </div>
+            <img src="photos/juju.jpg" alt="Woman looking to the right, seated on a step from a fire escape ladder, photographed in New York City by William Gail Photography & Design">
+        </div>
+
     </main>
     <div class="whitespace"></div>
     <footer name="footer">
@@ -49,6 +56,10 @@
     </footer>
     <script>
         window.addEventListener("DOMContentLoaded", () => {
+            const headerHeight = document.querySelector("header").getBoundingClientRect().height;
+            const newMobileBannerHeight = window.innerHeight - headerHeight;
+            const mobileBanner = document.querySelector(".mobile-banner");
+            mobileBanner.style.height = newMobileBannerHeight + 'px';
             const footer = document.querySelector("footer");
             const main = document.querySelector("main");
             const whiteSpace = document.querySelector(".whitespace");

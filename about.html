@@ -21,8 +21,16 @@
             </ul>
         </nav>
     </header>
+    
     <main id="contact-main">
-            <h1 class="center">Hi, my name is William Gail</h1>
+        <div class="mobile-banner">
+            <div class="banner-text">
+                <h1 class="uppercase">About</h1>
+                <h4><a href="index.html">Home</a> <span class="alternate-font">&bull;</span> About</h4>
+            </div>
+            <img src="photos/williamgailfullbodyshot.jpg" alt="full body shot of William Gail facing to the left, looking pensive with his left hand near his chin.">
+        </div>
+            <h1 class="center">Meet William</h1>
             <img src="photos/WilliamGailHeadshot.jpg" alt="headshot of William Gail">
             <p>Photographer based in the RGV and Houston area.</p>
         </section>
@@ -52,6 +60,10 @@
     </footer>
     <script>
         window.addEventListener("DOMContentLoaded", () => {
+            const headerHeight = document.querySelector("header").getBoundingClientRect().height;
+            const newMobileBannerHeight = window.innerHeight - headerHeight;
+            const mobileBanner = document.querySelector(".mobile-banner");
+            mobileBanner.style.height = newMobileBannerHeight + 'px';
             const footer = document.querySelector("footer");
             const main = document.querySelector("main");
             const whiteSpace = document.querySelector(".whitespace");

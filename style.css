@@ -275,7 +275,7 @@ body.sidepage {
 .sidepage main {
     min-height: 100%;
     width: 100%;
-    padding: 1rem;
+    padding: 1em;
     background-color: var(--quartz);
     z-index: 5;
 }
@@ -289,7 +289,39 @@ body.sidepage {
 .sidepage footer .nav-link {
     display: block;
 }
+.mobile-banner {
+    height: 100dvh;
+    margin: -1em -1em 0 -1em;
 
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: 1;
+
+}
+.mobile-banner img {
+    z-index: -1;
+    height: 100%;
+    object-fit: cover;
+    grid-column: 1;
+    grid-row: 1;
+    filter: brightness(0.5)
+}
+.uppercase {
+    text-transform: uppercase;
+}
+.banner-text {
+    text-align: center;
+    grid-column: 1;
+    grid-row: 1;
+    color: var(--quartz);
+    font-size: 2.5rem;
+    cursor: default;
+    align-self: center;
+}
+
+.alternate-font {
+    font-family: sans-serif;
+}
 .darker-background {
     background-image: linear-gradient(rgba(0,0,0,0.3), var(--darkergray));
     background-color: var(--darkergray);
